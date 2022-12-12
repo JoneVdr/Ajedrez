@@ -6,3 +6,6 @@ def partida_ajedrez(nombre_fichero):
         tablero.append(i.split('\t'))
     print(tablero)
     f = open(nombre_fichero, 'w')
+    for i in tablero:
+        f.write('\t'.join(i) + '\n')
+        f.close()
