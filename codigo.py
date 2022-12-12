@@ -14,7 +14,11 @@ def partida_ajedrez(nombre_fichero):
 movimiento = 0
 while True:
     continuar = input('¿Desea continuar? (s/n): ')
-    if continuar == 's':
-        movimiento += 1
-        print('Movimiento', movimiento)
-        partida_ajedrez('tablero.txt')
+    if continuar != 's':
+        break
+    else:
+        fila_origen = int(input('Introduce la fila de la pieza que quiere mover: '))
+        columna_origen = int(input('Introduce la columna de la pieza que quiere mover: '))
+        fila_destino = int(input('Introduce la fila de destino: '))
+        columna_destino = int(input('Introduce la columna de destino: '))
+
