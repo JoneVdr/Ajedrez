@@ -27,3 +27,10 @@ def partida_ajedrez(nombre_fichero):
             f.close()
     return
 partida_ajedrez('partida.txt')
+
+def tablero(nombre_fichero, n):
+    f = open(nombre_fichero, 'r')
+    tableros = f.read().split('\n')
+    for i in tableros[n*9:n*9+8]:
+        print(i)
+    return
