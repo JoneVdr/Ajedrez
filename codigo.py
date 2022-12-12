@@ -9,3 +9,12 @@ def partida_ajedrez(nombre_fichero):
     for i in tablero:
         f.write('\t'.join(i) + '\n')
         f.close()
+    return tablero
+
+movimiento = 0
+while True:
+    continuar = input('¿Desea continuar? (s/n): ')
+    if continuar == 's':
+        movimiento += 1
+        print('Movimiento', movimiento)
+        partida_ajedrez('tablero.txt')
