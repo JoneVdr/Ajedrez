@@ -20,7 +20,7 @@ def partida_ajedrez(nombre_fichero):
             tablero[fila_destino-1][columna_destino-1] = tablero[fila_origen-1][columna_origen-1]
             tablero[fila_origen-1][columna_origen-1] = '\t'
             movimientos += 1
-            f = open('partida.txt', 'a')
+            f = open('partida.txt', 'a', encoding='utf-8')
             f.write('Movimiento' + str(movimiento) + '\n')
             for i in tablero:
                 f.write('\t'.join(i) + '\n')
