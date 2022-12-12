@@ -1,4 +1,4 @@
-def partida_ajedrez(nombre_fichero):
+def partida_ajedrez(partidatxt):
     tablero_inicial = '♜\t♞\t♝\t♛\t♚\t♝\t♞\t♜\n♟\t♟\t♟\t♟\t♟\t♟\t♟\t♟\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n♙\t♙\t♙\t♙\t♙\t♙\t♙\t♙\n♖\t♘\t♗\t♕\t♔\t♗\t♘\t♖'
     tablero = []
     for i in tablero_inicial.split('\n'):
@@ -28,9 +28,11 @@ def partida_ajedrez(nombre_fichero):
     return
 partida_ajedrez('partida.txt')
 
-def tablero(nombre_fichero, n):
-    f = open(nombre_fichero, 'r')
+def tablero(partida1txt, n):
+    f = open(partida1txt, 'r')
     tableros = f.read().split('\n')
     for i in tableros[n*9:n*9+8]:
         print(i)
     return
+
+tablero('partida1.txt', 2)
